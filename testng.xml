@@ -1,9 +1,18 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
 <suite name="Practice Test Suite">
-    <test name="Login and Logout Tests">
+    <test name="Login, Logout, Upload, and Download Tests">
         <classes>
+            <!-- Login Test -->
             <class name="tests.LoginTest"/>
+
+            <!-- Logout Test -->
             <class name="tests.LogoutTest"/>
+
+            <!-- File Upload Test -->
+            <class name="tests.FileUploadTest"/>
+
+            <!-- File Download Test -->
+            <class name="tests.FileDownloadTest"/>
         </classes>
     </test>
 </suite>
