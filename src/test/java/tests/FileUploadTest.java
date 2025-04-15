@@ -12,7 +12,7 @@ public class FileUploadTest extends BaseTest {
     public void fileUpload() {
         driver.get("https://the-internet.herokuapp.com/upload");
         WebElement upload = driver.findElement(By.id("file-upload"));
-        upload.sendKeys("C:\\path\\to\\your\\file.txt"); // Use an actual file path on your machine
+        upload.sendKeys("C:\\VsCode\\java_Codes\\src\\main\\resources\\Nagaraj sample text file.txt"); // Use an actual file path on your machine
         driver.findElement(By.id("file-submit")).click();
         Assert.assertTrue(driver.getPageSource().contains("File Uploaded!"));
     }

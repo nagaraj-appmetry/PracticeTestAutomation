@@ -20,16 +20,16 @@ public class FileDownloadTest extends BaseTest {
         driver.get("https://the-internet.herokuapp.com/download");
 
         // Trigger the file download by clicking the link
-        WebElement fileLink = driver.findElement(By.linkText("sample.txt"));
+        WebElement fileLink = driver.findElement(By.linkText("test_upload.txt"));
         fileLink.click();
 
         // Wait for the download to start. You can use any specific wait condition.
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("sample.txt")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("test_upload.txt")));
 
         // Provide a location for the downloaded file (Downloads folder)
-        String downloadDirectory = System.getProperty("user.home") + "/Downloads"; // You can change the directory if needed
-        String filePath = downloadDirectory + "/sample.txt";  // The file you are downloading
+        String downloadDirectory = System.getProperty("C:\\VsCode\\java_Codes\\src\\main\\resources"); // You can change the directory if needed
+        String filePath = downloadDirectory + "/test_upload.txt";  // The file you are downloading
 
         // Wait for the file to appear in the directory
         File file = new File(filePath);
